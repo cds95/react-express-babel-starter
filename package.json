@@ -11,8 +11,9 @@
     "express": "^4.16.4"
   },
   "scripts": {
+    "build-client": "cd client && yarn && yarn run build",
     "build": "babel server --out-dir dist",
-    "dev": "nodemon --exec babel-node server/index.js",
+    "dev": "yarn build-client && nodemon --exec babel-node server/index.js",
     "start": "node dist/index.js",
     "heroku-postbuild": "yarn build && cd client && yarn && yarn run build"
   }
