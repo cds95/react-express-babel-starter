@@ -1,6 +1,5 @@
 import express from "express";
 import path from "path";
-import generatePassword from "password-generator";
 import userRouter from "./routes/users";
 
 const app = express();
